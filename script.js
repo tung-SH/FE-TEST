@@ -1,5 +1,7 @@
 /****************************
- *      CREATING ITEM00
+ * 
+ *      CREATING ITEM
+ * 
  */
 
 // input
@@ -22,3 +24,29 @@ function createItem() {
     input.value = "";
 }
 
+
+/*****************************
+ * 
+ *       MARK COMPLETE
+ * 
+ */
+
+// input
+const items = document.body.querySelectorAll('ul div');
+
+console.log(items)
+
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', () => {
+        markComplete(i)
+    })
+}
+
+
+// output 
+function markComplete(i) {
+
+    console.log(items[i])
+    items[i].remove();
+
+}
