@@ -20,13 +20,12 @@ function createItem() {
     div.textContent = input.value;
     // console.log(input.value);
     
-
     let img = document.createElement('img');
     img.src = "x-solid.svg";
     img.alt = "x-icon";
+    img.classList.add('x-icon')
 
     div.append(img);
-    
     list.append(div);
 
     input.value = "";
@@ -42,17 +41,16 @@ function createItem() {
 // input
 list.addEventListener('click', (e) => {
     markComplete(e)
+
 })
 
 
-// process
+// output
 function markComplete(e) {
     setDone(e)
     removeItem(e)
+
 }
-
-
-// output
 function setDone(e) {
     return true
 
@@ -61,3 +59,25 @@ function removeItem(e) {
     if (e.target.tagName === 'UL') return true;
     e.target.remove();
 }
+
+
+
+
+
+/*******************************************************************
+ *                       REMOVE ITEM
+ * 
+ * 
+ */
+
+// input 
+let xIcons = document.body.getElementsByClassName('x-icon')
+
+
+
+// output
+function removeParent(i) {
+    xIcons[i].parentElement.remove();
+
+} 
+// console.log(xIcons)
