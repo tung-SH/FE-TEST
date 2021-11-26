@@ -39,7 +39,7 @@ list.addEventListener('click', (e) => {
 
 // output 
 function markComplete(e) {
-    if (e.target === this) return true;
-
+    if (e.target.tagName === 'UL') return true;
     e.target.remove();
+    
 }
