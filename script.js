@@ -53,11 +53,11 @@ function markComplete(e) {
 
 
 // output
-function removeItem(e) {
-    if (e.target.tagName === 'UL') return true;
-    e.target.remove();
-}
 function setDone(e) {
     return true
 
+}
+function removeItem(e) {
+    if (e.target.tagName === 'UL') return true;
+    e.target.remove();
 }
