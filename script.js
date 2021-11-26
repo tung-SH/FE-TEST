@@ -62,6 +62,7 @@ function markComplete(e) {
 function setDone(e) {
     congrats.textContent = `Well done! You're done "${e.target.textContent}"`;
     congrats.style.visibility = "visible";
+    setTimeout(function() {congrats.style.visibility = "hidden"}, 2000)
 
 }
 function removeItem(e) {
