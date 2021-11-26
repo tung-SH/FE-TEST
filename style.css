@@ -62,8 +62,8 @@ body {
             padding: 10px 20px;
 
             /* deco */
-            /* border-radius: 5px;
-            outline: none; */
+            border-radius: 5px;
+            outline: none;
 
         }
         .container button {
