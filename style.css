@@ -77,13 +77,23 @@ body {
             }
 
     .container ul {
-        /* text space */
-        padding: 10px 20px;
+        /* child space */
+        padding: 10px;
 
-        /* deco */
+        /* center item */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     }
-    .container ul > * {
-        outline: 1px solid grey;
-        
-    }
+        .container ul div {
+            outline: 1px solid grey;
+
+            width: 45%;
+            /* sibling space */
+            margin: 10px 0;
+
+
+            /* text space */
+            padding: 10px 20px;
+        }

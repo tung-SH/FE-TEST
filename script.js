@@ -1,5 +1,5 @@
 /****************************
- *      CREATING FUNCTION
+ *      CREATING ITEM00
  */
 
 // input
