@@ -46,7 +46,7 @@ function removeParent(e) {
 
 // input
 list.addEventListener('click', (e) => {
-    markComplete(e)
+    if (e.target.tagName == 'DIV') markComplete(e)
 
 })
 
@@ -66,7 +66,6 @@ function setDone(e) {
 
 }
 function removeItem(e) {
-    if (e.target.tagName === 'UL') return true;
     e.target.remove();
 }
 
