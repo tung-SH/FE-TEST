@@ -32,21 +32,14 @@ function createItem() {
  */
 
 // input
-const items = document.body.querySelectorAll('ul div');
-
-console.log(items)
-
-for (let i = 0; i < items.length; i++) {
-    items[i].addEventListener('click', () => {
-        markComplete(i)
-    })
-}
+list.addEventListener('click', (e) => {
+    markComplete(e)
+})
 
 
 // output 
-function markComplete(i) {
+function markComplete(e) {
+    if (e.target === this) return true;
 
-    console.log(items[i])
-    items[i].remove();
-
+    e.target.remove();
 }
