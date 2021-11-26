@@ -7,7 +7,7 @@
 
 }
 body {
-    background-color: #000;
+    /* background-color: #000; */
     color: grey;
 
     font-family: Helvetica, sans-serif;
@@ -77,9 +77,6 @@ body {
             }
 
     .container ul {
-        /* child space */
-        padding: 10px;
-
         /* center item */
         display: flex;
         flex-direction: column;
@@ -93,7 +90,16 @@ body {
             /* sibling space */
             margin: 10px 0;
 
-
             /* text space */
             padding: 10px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
         }
+            .container div img {
+                outline: 1px solid;
+                height: 40px;
+                padding: 10px;
+            }

@@ -1,6 +1,5 @@
-/****************************
- * 
- *      CREATING ITEM
+/*****************************************************************
+ *                      CREATING ITEM
  * 
  */
 
@@ -18,16 +17,25 @@ const input = document.body.querySelector('input');
 
 function createItem() {
     let div = document.createElement('div');
-    div.innerHTML = input.value;
+    div.textContent = input.value;
     // console.log(input.value);
+    
+
+    let img = document.createElement('img');
+    img.src = "x-solid.svg";
+    img.alt = "x-icon";
+
+    div.append(img);
+    
     list.append(div);
+
     input.value = "";
 }
 
 
-/*****************************
- * 
- *       MARK COMPLETE
+
+/*******************************************************************
+ *                        MARK COMPLETE
  * 
  */
 
@@ -37,9 +45,19 @@ list.addEventListener('click', (e) => {
 })
 
 
-// output 
+// process
 function markComplete(e) {
+    setDone(e)
+    removeItem(e)
+}
+
+
+// output
+function removeItem(e) {
     if (e.target.tagName === 'UL') return true;
     e.target.remove();
-    
+}
+function setDone(e) {
+    return true
+
 }
