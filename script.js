@@ -1,5 +1,5 @@
 /*****************************************************************
- *                      CREATING ITEM
+ *             CREATING ITEM && REMOVE ITEM 
  * 
  */
 
@@ -24,13 +24,19 @@ function createItem() {
     img.src = "x-solid.svg";
     img.alt = "x-icon";
     img.classList.add('x-icon')
+    img.addEventListener('click', (e) => {
+        removeParent(e)
+    })
 
     div.append(img);
     list.append(div);
 
     input.value = "";
 }
+function removeParent(e) {
+    e.target.parentElement.remove();
 
+}
 
 
 /*******************************************************************
@@ -46,13 +52,16 @@ list.addEventListener('click', (e) => {
 
 
 // output
+const congrats = document.body.querySelector('.congrats')
 function markComplete(e) {
     setDone(e)
     removeItem(e)
 
+
 }
 function setDone(e) {
-    return true
+    congrats.textContent = `Well done! You're done "${e.target.textContent}"`;
+    congrats.style.visibility = "visible";
 
 }
 function removeItem(e) {
@@ -64,20 +73,3 @@ function removeItem(e) {
 
 
 
-/*******************************************************************
- *                       REMOVE ITEM
- * 
- * 
- */
-
-// input 
-let xIcons = document.body.getElementsByClassName('x-icon')
-
-
-
-// output
-function removeParent(i) {
-    xIcons[i].parentElement.remove();
-
-} 
-// console.log(xIcons)
