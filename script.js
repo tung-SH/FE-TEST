@@ -6,9 +6,8 @@
 // input
 const button = document.body.querySelector('button')
 
-button.addEventListener('click', () => {
-    createItem()
-})
+button.addEventListener('click', createItem)
+
 
 
 // output
